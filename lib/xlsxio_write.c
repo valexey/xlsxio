@@ -559,10 +559,12 @@ struct xlsxio_write_struct {
 };
 
 #ifndef NO_ROW_NUMBERS
-#define ROWNRTAG " r=\"%" PRIu64 "\""
+//#define ROWNRTAG " r=\"%" PRIu64 "\""
+#define ROWNRTAG ""
 #define ROWNRPARAM(handle) , handle->rownr
 #ifndef NO_COLUMN_NUMBERS
-#define COLNRTAG " r=\"%s%" PRIu64 "\""
+//#define COLNRTAG " r=\"%s%" PRIu64 "\""
+#define COLNRTAG ""
 #define COLNRPARAM(handle) , get_A1col(handle->colnr), handle->rownr
 #endif
 #endif
